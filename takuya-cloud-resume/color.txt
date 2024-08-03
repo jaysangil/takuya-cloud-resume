@@ -1,0 +1,32 @@
+:root {
+-- bg-color: #fff;
+-- text-color: #0f0c27;
+-- hover: hsl(260, 100%, 51%);
+
+-- big-font: 3.2rem;
+-- medium-font: 1.8rem;
+-- p-font: 0.941rem;
+-- dark-blue: #012677;
+-- blue: #5c65c0;
+-- skyblue: #00b4fc;
+-- light-blue: #005bc5;
+-- dark-pink: #f64c57;
+-- dark-magenta: #e21b5a;
+-- light-green: #61e2c2;
+}
+
+body.active {
+-- text-color: #fff;
+-- bg-color: #0f0c27;
+-- skill-bar-color: rgba(225, 208, 208, 0.771);
+-- about-me-color: rgba(64, 64, 64, 0.614);
+-- about-me-font-color: #f2f2f2;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    --skill-bar-color: rgba(0,0,0,0.1);
+    --about-me-color: rgba(178, 178, 227, 0.433);
+    --about-me-font-color: #2f2f2f;
+}

@@ -15,6 +15,9 @@
     --dark-pink: #f64c57;
     --dark-magenta: #e21b5a;
     --light-green: #61e2c2;
+    --gh-gray: #5c5470;
+    --ig-orange: #fcb045;
+    --cool-orange-gradient: linear-gradient(135deg, #ff7e5f, #feb47b);
 }
 
 body.active {
@@ -40,6 +43,10 @@ body {
     list-style: none;
     text-decoration: none;
     font-family: "Poppins", sans-serif;
+}
+
+section {
+    padding: 50px 10%; 
 }
 
 header {
@@ -111,5 +118,110 @@ header.shadow {
     justify-content: center;
     min-height: 100vh;
     flex-direction: column;
-    width: 65;
+    width: 65%;
+    padding-left: 30px;
+    margin-top: 100px;
+}
+
+.featured-text .hello {
+    font-size: 50px;
+    font-weight: 500;
+    margin-bottom: -20px;
+    color: var(--text-color)
+}
+
+.featured-name {
+    font-size: 50px;
+    font-weight: 400;
+    margin-block: 20px;
+    color:  #8749f2;
+    margin-bottom: 10px;
+}
+
+.typedText {
+    font-family: sans-serif;
+    color: #8749f2;
+    font-size: 70px;
+    font-weight: 600;
+    text-transform: capitalize;
+}
+
+.featured-text-info {
+    font-size: 16px;
+    margin-bottom: 30px;
+    color: var(--text-color)
+}
+
+.btn {
+    display: inline-block;
+    background: #732dec;
+    color: #ffff;
+    margin-top: 20px;
+    padding: 10px 25px;
+    border-radius: 10px;
+}
+
+.btn:hover {
+    background: #8749f2;
+}
+
+
+/*---social icons---*/
+
+.social_icons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: -5px;
+    gap: 32px
+}
+
+.social_icons i {
+    color: #ddd;
+    font-size: 18px;
+    margin: 5px;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    text-align: center;
+    box-shadow: 0px 1px 5px 3px #8749f2;
+    border-radius: 50%;
+    transition: 0.5s;
+}
+
+.social_icons i:hover {
+    transform: scale(1.2);
+    border: 1px solid rgb(255, 255, 255, 0.3);
+}
+
+
+/*----Image box----*/
+
+.featured-image {
+    display: flex;
+    justify-content: right;
+    align-content: center;
+    min-height: 80vh;
+    width: 100%
+}
+
+.image {
+    margin-top: 10%;
+    width: 500px;
+    height: 700px;
+    border-radius: 40% 40% 40% 40%;
+    overflow: hidden;
+    animation: imgFlat 5s ease-in-out infinite
+}
+
+@keyframes imgFloat {
+    50% {
+        transform :translateY(50px)
+    }
+}
+
+.image img {
+    width: 500px;
+    height: 700px;
+    object-fit: cover;
 }

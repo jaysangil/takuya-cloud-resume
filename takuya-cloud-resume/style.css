@@ -225,3 +225,79 @@ header.shadow {
     height: 700px;
     object-fit: cover;
 }
+
+/*----About----*/
+
+.about-containter {
+    gap: 1rem;
+    margin-top: 2rem;
+    padding-left: 30px;
+}
+
+
+.about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border-radius: 10px;
+}
+
+
+.about h1 {
+    color: var(--about-me-font-color);
+    margin-bottom: 1.1rem;
+    position: relative;
+    display: inline-block;
+    font-size: 3.5rem;
+}
+
+.about h1::after {
+    position: absolute;
+    content: "";
+    top: 50%;
+    right: -50%;
+    width: 45%;
+    height: 3px;
+    background: linear-gradient(45deg, #f64c57, #e21b5a);
+}
+
+.about p {
+    color: var(--text-color);
+    margin: 1.5rem 0;
+}
+
+.social {
+    margin-top: 10px;
+    margin-bottom: 25px;
+}
+
+.social i {
+    color: #ddd;
+    font-size: 16px;
+    background-color: var(--about-me-color);
+    margin: 5px;
+    height: 35px;
+    width: 35px;
+    line-height: 35px;
+    text-align: center;
+    border-radius: 5px;
+    transition: 0.5s;
+}
+
+.social i:hover {
+    transform: scale(1.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.btn-b{
+    display: inline-block;
+    background: #732dec;
+    color: #fff;
+    padding: 8px 20px;
+    margin-top: -5px;
+    margin-left: 2px;
+    border-radius: 10px; 
+}
+
+.btn-b:hover {
+    background: #8749f2;
+}

@@ -51,6 +51,34 @@
             </div>
         </div>
     </section>
+
+     <!-- My Tech Stack Marquee -->
+     <section class="tech-stack" id="tech-stack">
+        <div class="heading">
+            <h2>My Tech Stack</h2>
+        </div>
+        <div class="marquee">
+            <div class="marquee-content">
+                <img src="assets/aws.png" alt="JavaScript" />
+                <img src="assets/azure.png" alt="React" />
+                <img src="assets/docker.png" alt="Next.js" />
+                <img src="assets/kubernetes.png" alt="VSCode" />
+                <img src="assets/terraform.png" alt="Python" />
+                <img src="assets/vagrant.png" alt="HTML5" />
+                <img src="assets/git.png" alt="CSS3" />
+                <img src="assets/jenkins.png" alt="Sass" />
+                <img src="assets/chef.png" alt="Node.js" />
+                <img src="assets/ansible.png" alt="Docker" />
+                <img src="assets/puppet.png" alt="Docker" />
+                <img src="assets/linux.png" alt="Docker" />
+                <img src="assets/python.png" alt="Docker" />
+                <img src="assets/html.png" alt="Docker" />
+                <img src="assets/css.png" alt="Docker" />
+                <img src="assets/javascript.png" alt="Docker" />
+            </div>
+        </div>
+    </section>
+    
     <!--about-->
     <section class="about" id="about">
         <div class="about-container">
@@ -75,45 +103,29 @@
             <span>My Skills</span>
         </div>
         <div class="skills-grid">
+            <!-- DevOps -->
             <div class="skill-item">
-                <i class="fas fa-code"></i>
-                <h3>Web Development</h3>
-                <p>Building responsive and functional websites using modern web technologies.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-database"></i>
-                <h3>Database Management</h3>
-                <p>Efficient database design, implementation, and maintenance.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Computing</h3>
-                <p>Expertise in cloud services and infrastructure management.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-network-wired"></i>
-                <h3>Networking</h3>
-                <p>Designing and maintaining reliable and secure networks.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-lock"></i>
-                <h3>Cybersecurity</h3>
-                <p>Implementing best practices to secure data and systems.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-project-diagram"></i>
-                <h3>Project Management</h3>
-                <p>Effective planning and management of IT projects.</p>
-            </div>
-            <div class="skill-item">
-                <i class="fas fa-tools"></i>
+                <img src="https://cdn-icons-png.flaticon.com/128/12219/12219742.png" loading="lazy" alt="Settings " title="Settings " width="68" height="68">
                 <h3>DevOps</h3>
                 <p>Continuous integration and delivery for software development.</p>
             </div>
+            <!-- Cloud Engineering -->
             <div class="skill-item">
-                <i class="fas fa-mobile-alt"></i>
-                <h3>Mobile Development</h3>
-                <p>Creating user-friendly mobile applications.</p>
+                <img src="https://cdn-icons-png.flaticon.com/128/8472/8472064.png" loading="lazy" alt="Cloud computing " title="Cloud computing " width="64" height="64">
+                <h3>Cloud Engineering</h3>
+                <p>Expertise in cloud services and infrastructure management.</p>
+            </div>
+            <!-- SRE -->
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/10835/10835163.png" loading="lazy" alt="Devops " title="Devops " width="64" height="64">
+                <h3>SRE</h3>
+                <p>Optimizing system reliability and performance through engineering best practices.</p>
+            </div>
+            <!-- Software Development -->
+            <div class="skill-item">
+                <img src="https://cdn-icons-png.flaticon.com/128/11455/11455391.png" loading="lazy" alt="Coding " title="Coding " width="64" height="64">
+                <h3>Software Development</h3>
+                <p>Building responsive and functional websites using modern web technologies.</p>
             </div>
         </div>
     </section>
@@ -184,16 +196,31 @@
         </div>
     </section>
     <!--Contact-->
-    <section id="contact">
-        <div class="heading">
-            <h2>Contact</h2>
-            <span>Get In Touch</span>
-        </div>
-        <!-- Contact form or details go here -->
-        <div class="contact-details">
-            <p><i class="fas fa-phone"></i> <strong>Phone:</strong> (123) 456-7890</p> <!-- Phone Icon -->
-            <p><i class="fas fa-map-marker-alt"></i> <strong>Location:</strong> Calamba City, Laguna</p> <!-- Place Icon -->
-            <p><i class="fas fa-envelope"></i> <strong>Email:</strong> takuya@example.com</p> <!-- Email Icon -->
-        </div>
-    </section>
+<section id="contact">
+    <div class="heading">
+        <h2>Contact</h2>
+        <span>Open for opportunities: <strong>Yes</strong></span>
+    </div>
+
+    <div class="contact-form">
+        <h3>Contact Form</h3>
+        <form action="#" method="post">
+            <div class="form-group">
+                <input type="text" id="name" name="name" placeholder="Full name" required>
+                <input type="email" id="email" name="email" placeholder="Email address" required>
+            </div>
+            <div class="form-group">
+                <textarea id="message" name="message" rows="5" placeholder="Your message" required></textarea>
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn">
+                    <i class="fas fa-paper-plane"></i> Submit
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+
+    <script src="script.js"></script>
 </html>

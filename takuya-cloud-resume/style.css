@@ -82,6 +82,17 @@ body.active #darkmode:hover {
         0 0 25px #FFD700; /* Further yellow glow */
 }
 
+/* Dark Mode Marquee */
+body.active .marquee-content img:hover {
+    transform: scale(1.2);
+    box-shadow: 
+        0 0 5px #00b0d6,  /* Soft cyan glow */
+        0 0 10px #00b0d6, /* Medium cyan glow */
+        0 0 15px #00b0d6, /* Bright cyan glow */
+        0 0 20px #00b0d6, /* Stronger cyan glow */
+        0 0 25px #0077c8; /* Intense deep blue glow */
+}
+
 /* Focus States for Accessibility */
 button:focus, a:focus {
     outline: 2px solid var(--hover-color);
@@ -123,6 +134,11 @@ body.active #projects {
 body.active #projects h2,
 body.active #projects p {
     color: var(--dark-mode-text); /* Light gray text for readability in dark mode */
+}
+
+body.active #projects .heading h2,
+body.active #projects .heading span {
+    color: var(--dark-mode-text)
 }
 
 /* Smooth hover effect for each section */
@@ -274,7 +290,7 @@ header.shadow {
 }
 
 .navbar a {
-    font-size: 1rem;
+    font-size: 1.2rem;
     padding: 10px 20px;
     color: var(--text-color);
     font-weight: 500;
@@ -362,7 +378,7 @@ header.shadow {
 }
 
 .featured-text .hello {
-    font-size: 50px;
+    font-size: 52px;
     font-weight: 500;
     margin-bottom: -20px;
     color: var(--teal-blue);
@@ -370,7 +386,7 @@ header.shadow {
 }
 
 .featured-name {
-    font-size: 50px;
+    font-size: 54px;
     font-weight: 400;
     margin-block: 20px;
     color: var(--light-blue); /* Light blue for the name */
@@ -378,13 +394,14 @@ header.shadow {
     background: linear-gradient(45deg, var(--teal-blue), var(--light-blue)); /* Gradient effect for the name */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
 .typedText {
     font-family: sans-serif;
     color: var(--light-blue);
-    font-size: 70px;
+    font-size: 72px;
     font-weight: 600;
     text-transform: capitalize;
 }
@@ -478,6 +495,74 @@ header.shadow {
     transform: scale(1.05);
 }
 
+/* My Tech Stack Section */
+.tech-stack {
+    padding: 40px 10%;
+    background-color: var(--bg-color);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.tech-stack .heading h2 {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.marquee {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    background: var(--light-gray);
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.marquee::before,
+.marquee::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100px;
+    height: 100%;
+    z-index: 2;
+    pointer-events: none;
+    background: linear-gradient(to right, var(--bg-color), rgba(255, 255, 255, 0));
+}
+
+.marquee::after {
+    right: 0;
+    transform: rotateZ(180deg);
+}
+
+.marquee-content {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    animation: scroll 15s linear infinite;
+}
+
+
+.marquee-content img {
+    height: 45px;
+    margin: 0 20px;
+    transition: transform 0.3s ease;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.marquee-content img:hover {
+    transform: scale(1.2);
+    box-shadow: 
+        0 0 5px #FFD700,  /* Soft yellow glow */
+        0 0 10px #FFA726, /* Orange glow */
+        0 0 15px #FFD700, /* Stronger yellow glow */
+        0 0 20px #FFA726, /* Intense orange glow */
+        0 0 25px #FFD700; /* Further yellow glow */
+}
+
+
+
 /* About Section */
 
 .about-containter {
@@ -506,6 +591,7 @@ header.shadow {
     background: linear-gradient(45deg, var(--teal-blue), var(--light-blue)); /* Gradient text */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    background-clip: text;
     text-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for depth */
 }
 
@@ -583,6 +669,7 @@ header.shadow {
 }
 
 .heading span {
+    font-size: 1.2rem;
     font-size: var(--p-font);
     color: var(--light-blue);
 }
@@ -597,15 +684,18 @@ header.shadow {
 }
 
 .skill-item {
+    transform: translateY(20px);
     background: var(--light-gray);
     border-radius: 8px;
-    padding: 20px;
+    padding: 25px;
     text-align: center;
     box-shadow: 0 2px 4px rgba(25, 149, 173, 0.3);
     transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease, box-shadow 0.3s ease;
 }
 
+
 .skill-item:hover {
+    color: var(--hover-color);
     transform: translateY(-10px) scale(1.05); /* Lift and slight scale on hover */
     box-shadow: 0 4px 12px rgba(25, 149, 173, 0.5); /* Enhanced shadow on hover */
     background: linear-gradient(135deg, rgba(25, 149, 173, 0.15), rgba(161, 214, 226, 0.15)); /* Gradient background on hover */
@@ -621,9 +711,11 @@ header.shadow {
 }
 
 .skill-item h3 {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+    font-weight: 600;
     color: var(--text-color);
     margin-bottom: 1rem;
+    letter-spacing: 0.5px;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -632,6 +724,7 @@ header.shadow {
 .skill-item p {
     font-size: 1rem;
     color: var(--text-color);
+    letter-spacing: 0.3px;
 }
 
 /* Certifications Section */
@@ -717,6 +810,20 @@ footer a:hover {
     }
 
     .skills-grid, .certifications-grid {
+        gap: 2.5rem;
         grid-template-columns: 1fr;
+    }
+
+    .marquee-content img {
+        height: 70px;
+    }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
     }
 }

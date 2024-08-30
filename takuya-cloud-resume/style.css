@@ -253,7 +253,7 @@ header {
     align-items: center;
     justify-content: space-between;
     background: linear-gradient(90deg, #1995AD, #A1D6E2); /* Gradient background */
-    padding: 5px 10%;
+    padding: 5px 5%;
     transition: 0.2;
     box-shadow: -3px -3px 7px rgba(255, 255, 255, 0.2), 2px 2px rgba(25, 149, 173, 0.6);
 }
@@ -285,19 +285,24 @@ header.shadow {
 /* Navbar */
 .navbar {
     display: flex;
+    align-items: center;
     justify-content: flex-end; /* Ensures alignment to the right */
     gap: 20px; /* Adjust spacing between items */
 }
 
 .navbar a {
-    font-size: 1.2rem;
-    padding: 10px 20px;
-    color: var(--text-color);
-    font-weight: 500;
+    display: flex;
+    align-items: right;
+    font-size: 1.3rem;
+    padding: 10px 0px;
+    color: #004e66;
+    text-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    font-weight: 600;
     position: relative;
     transition: color 0.3s ease, text-shadow 0.3s ease;
     text-decoration: none; /* Ensures there's no underline by default */
 }
+
 
 .navbar a::after {
     content: "";
@@ -337,9 +342,15 @@ header.shadow {
 }
 
 #darkmode {
-    font-size: 22px;
+    font-size: 1.3rem;
     cursor: pointer;
     color: var(--text-color);
+    margin-right: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
     transition: color 0.3s ease, text-shadow 0.3s ease;
 }
 
@@ -351,6 +362,7 @@ header.shadow {
         0 0 15px #FFA726, /* Stronger orange glow */
         0 0 20px #FFD700, /* Intense yellow glow */
         0 0 25px #FFA726; /* Further orange glow */
+    transform: scale(1.1);
 }
 
 /* Text Box */
@@ -358,7 +370,7 @@ header.shadow {
 .featured-box {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     position: relative;
     height: 100vh;
     padding: 0 10%;
@@ -419,6 +431,7 @@ header.shadow {
     margin-top: 20px;
     padding: 10px 25px;
     border-radius: 10px;
+    border: 2px solid transparent;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(25, 149, 173, 0.3);
 }
@@ -426,6 +439,7 @@ header.shadow {
 .btn:hover {
     background: var(--hover-color);
     transform: scale(1.05); /* Slight scaling on hover */
+    border-color: var(--teal-blue);
     box-shadow: 0 4px 8px rgba(25, 149, 173, 0.5);
 }
 
@@ -441,8 +455,7 @@ header.shadow {
 
 .social_icons i {
     color: #ddd;
-    font-size: 18px;
-    margin: 5px;
+    font-size: 20px;
     height: 40px;
     width: 40px;
     line-height: 40px;
@@ -470,13 +483,19 @@ header.shadow {
 .image {
     margin-top: 10%;
     width: 500px;
-    height: 550px;
+    height: 500px;
     border-radius: 50%;
     overflow: hidden;
-    border: 5px solid rgba(0, 78, 102, 0.2); /* Light border */
-    box-shadow: 0px 4px 12px rgba(0, 78, 102, 0.3); /* Soft shadow for depth */
-    position: relative;
+    border: 5px solid rgba(0, 78, 102, 0.2);
+    box-shadow: 0px 4px 12px rgba(0, 78, 102, 0.3);
+    transition: box-shadow 0.3s ease, border-color 0.3s ease;
 }
+
+.image:hover {
+    border-color: #20c997; /* Matching soft teal border color */
+    box-shadow: 0 0 20px #20c997, 0 0 40px #20c997; /* Soft teal glow */
+}
+
 
 @keyframes imgFloat {
     50% {
@@ -485,14 +504,15 @@ header.shadow {
 }
 
 .image img {
-    width: 500px;
-    height: 700px;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    transition: transform 0.5s ease;
+    border-radius: 20px;
 }
 
 .image:hover img {
     transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(0, 78, 102, 0.5);
 }
 
 /* My Tech Stack Section */

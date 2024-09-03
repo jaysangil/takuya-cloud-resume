@@ -82,6 +82,17 @@ body.active #darkmode:hover {
         0 0 25px #FFD700; /* Further yellow glow */
 }
 
+
+/* Dark Mode Styles for Marquee Section */
+body.active .marquee {
+    background: linear-gradient(135deg, rgba(45, 45, 60, 0.9), rgba(30, 30, 40, 0.9)); /* Dark gradient */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Slightly darker shadow for depth */ /* Adjust shadow for dark mode */
+}
+
+body.active .marquee-content {
+    color: var(--dark-mode-bg)
+}
+
 /* Dark Mode Marquee */
 body.active .marquee-content img:hover {
     transform: scale(1.2);
@@ -91,6 +102,14 @@ body.active .marquee-content img:hover {
         0 0 15px #00b0d6, /* Bright cyan glow */
         0 0 20px #00b0d6, /* Stronger cyan glow */
         0 0 25px #0077c8; /* Intense deep blue glow */
+}
+
+body.active .marquee::before {
+    background: linear-gradient(to right, rgba(32, 32, 32, 0.8), transparent); /* Uniform dark gradient */
+}
+
+body.active .marquee::after {
+    background: linear-gradient(to left, rgba(32, 32, 32, 0.8), transparent); /* Perfect mirror of the left side */
 }
 
 /* Focus States for Accessibility */
@@ -112,33 +131,39 @@ body.active .skill-item, body.active .certification-card, body.active .contact-f
 
 /* Projects Section */
 #projects {
-    padding-bottom: 100px;
-    background-color: var(--bg-color); /* Matches the light mode background */
+    padding: 50px 10%;
+    background-color: var(--bg-color); /* Light mode background */
+    color: var(--teal-blue); /* Light mode text color */ /* Matches the light mode background */
 }
 
 #projects h2 {
     font-size: 2.5rem;
-    color: var(--text-color); /* Teal blue for headings */
+    color: var(--teal-blue); /* Teal blue for headings */
 }
 
 #projects p {
     font-size: 1rem;
-    color: var(--text-color); /* Teal blue for paragraph text */
+    color: var(--teal-blue); /* Teal blue for paragraph text */
 }
 
 /* Dark Mode for Projects Section */
 body.active #projects {
-    background-color: var(--dark-mode-bg); /* Darker background for dark mode */
+    background-color: var(--dark-mode-bg); /* Dark mode background */
+    color: var(--teal-blue); /* Dark mode text color */ /* Darker background for dark mode */
 }
 
-body.active #projects h2,
+body.active #projects h2 {
+    font-size: 2.5rem;
+    color: var(--teal-blue); /* Light mode color */
+}
+
 body.active #projects p {
-    color: var(--dark-mode-text); /* Light gray text for readability in dark mode */
+    color: var(--teal-blue); /* Light gray text for readability in dark mode */
 }
 
 body.active #projects .heading h2,
 body.active #projects .heading span {
-    color: var(--dark-mode-text)
+    color: var(--teal-blue)
 }
 
 /* Smooth hover effect for each section */
@@ -480,6 +505,7 @@ header.shadow {
     width: 100%;
 }
 
+
 .image {
     margin-top: 10%;
     width: 500px;
@@ -533,13 +559,15 @@ header.shadow {
     overflow: hidden;
     position: relative;
     width: 100%;
-    background: var(--light-gray);
-    border-radius: 8px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.8), rgba(240, 240, 255, 0.8)); /* Soft gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for light mode */
+    padding: 10px 0; /* Optional: Adds slight padding */
+    transition: background 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
 }
 
-.marquee::before,
-.marquee::after {
+/* Marquee Default Light Mode */
+.marquee::before, .marquee::after {
     content: '';
     position: absolute;
     top: 0;
@@ -547,12 +575,12 @@ header.shadow {
     height: 100%;
     z-index: 2;
     pointer-events: none;
-    background: linear-gradient(to right, var(--bg-color), rgba(255, 255, 255, 0));
+    background: linear-gradient(to right, var(--bg-color), rgba(255, 255, 255, 0)); /* Light mode gradient */
 }
 
 .marquee::after {
     right: 0;
-    transform: rotateZ(180deg);
+    background: linear-gradient(to left, rgba(245, 245, 245, 1), transparent); /* Ensure it's mirrored perfectly */
 }
 
 .marquee-content {
@@ -560,25 +588,20 @@ header.shadow {
     justify-content: space-around;
     align-items: center;
     height: 100px;
-    animation: scroll 15s linear infinite;
+    animation: scroll 15s linear infinite; /* Adjust speed for readability */
+    gap: 20px; /* Adds spacing between icons */
 }
 
 
 .marquee-content img {
     height: 45px;
-    margin: 0 20px;
-    transition: transform 0.3s ease;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, filter 0.3s ease; /* Smooth transformation */
+    filter: brightness(1); /* Normal brightness */
 }
 
 .marquee-content img:hover {
-    transform: scale(1.2);
-    box-shadow: 
-        0 0 5px #FFD700,  /* Soft yellow glow */
-        0 0 10px #FFA726, /* Orange glow */
-        0 0 15px #FFD700, /* Stronger yellow glow */
-        0 0 20px #FFA726, /* Intense orange glow */
-        0 0 25px #FFD700; /* Further yellow glow */
+    transform: scale(1.1); /* Slight scale up on hover */
+    filter: brightness(1.2) drop-shadow(0 0 5px rgba(25, 149, 173, 0.5)); /* Glowing effect */
 }
 
 

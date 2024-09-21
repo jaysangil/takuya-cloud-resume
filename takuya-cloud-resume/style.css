@@ -296,15 +296,13 @@ header.shadow {
 }
 
 .logo:hover {
-    color: #00b0d6; /* Brighten the text color */
+    color: #FFA726; /* Matching the hover text color */
     text-shadow: 
-        0 0 5px #00b0d6,  /* Soft cyan glow */
-        0 0 10px #00b0d6, /* Medium cyan glow */
-        0 0 20px #00b0d6, /* Bright cyan glow */
-        0 0 30px #00b0d6, /* Stronger cyan glow */
-        0 0 40px #0077c8, /* Deep blue glow for better contrast */
-        0 0 50px #0077c8, /* More intense deep blue glow */
-        0 0 60px #004e66; /* Darker teal blue, creating depth */
+        0 0 5px #FFA726,  /* Soft orange glow */
+        0 0 10px #FFD700, /* Yellow glow */
+        0 0 20px #FFA726, /* Stronger orange glow */
+        0 0 30px #FFD700, /* Intense yellow glow */
+        0 0 40px #FFA726; /* Further orange glow */
 }
 
 /* Navbar */
@@ -479,15 +477,16 @@ header.shadow {
 }
 
 .social_icons i {
-    color: #ddd;
+    color: #ddd; /* Neutral base color */
     font-size: 20px;
     height: 40px;
     width: 40px;
     line-height: 40px;
     text-align: center;
-    box-shadow: 0px 1px 5px 3px var(--light-blue);
+    background: linear-gradient(135deg, #1995AD, #A1D6E2); /* Teal to light blue gradient */
     border-radius: 50%;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 1px 5px 3px rgba(161, 214, 226, 0.5); /* Soft blue glow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .social_icons i:hover {
@@ -686,17 +685,19 @@ header.shadow {
 .btn-b {
     display: inline-block;
     background: var(--teal-blue);
-    color: #fff;
+    color: var(--bg-color);
     padding: 12px 30px;
     border-radius: 10px;
     transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
     box-shadow: 0 2px 5px rgba(25, 149, 173, 0.3);
     margin-top: 40px;
+    border: 2px solid transparent; /* Add a border */
 }
 
 .btn-b:hover {
     background: var(--hover-color);
     transform: scale(1.05); /* Slight scaling on hover */
+    border-color: var(--teal-blue); /* Border color change on hover */
     box-shadow: 0 4px 8px rgba(25, 149, 173, 0.5); /* Enhanced shadow on hover */
 }
 
